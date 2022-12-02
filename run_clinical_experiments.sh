@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SPLEEN_DATA_DIR="/Users/amithkamath/repo/shakeAndTest"
+SPLEEN_DATA_DIR="./data/"
 
 for seed in 1 2 3
 do 
