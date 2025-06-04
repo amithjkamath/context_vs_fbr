@@ -1,12 +1,53 @@
-# Context versus Foreground-to-Background Ratio in 3D Image Segmentation
+# Context versus Foreground Ratio trade-off for 3D Image Segmentation
 
-This repository supports our recent MedNeurIPS 2022 abstract on the importance of context versus foreground-to-background ratio in segmentation tasks. See [here](http://www.cse.cuhk.edu.hk/~qdou/public/medneurips2022/72.pdf) for the abstract.
+![NeurIPSW 2022](https://img.shields.io/badge/Conference-NeurIPSW%202022-blue)
 
-## Overview
+This repository contains experiments associated with the [Medical Image meets NeurIPS 2022 Workshop abstract](http://www.cse.cuhk.edu.hk/~qdou/public/medneurips2022/72.pdf):
+
+**"How do 3D image segmentation networks behave across the context versus foreground ratio trade-off?"**  
+*Amith Kamath, Yannick Suter, Suhang You, Michael Müller, Jonas Willmann, Nicolaus Andratschke, Mauricio Reyes*
 
 ![Broad research question](./context_vs_fbr.png)
 
-Modern 3D medical image segmentation is typically done using a sliding window approach due to GPU memory constraints. However, this presents an interesting trade-off between the amount of global context the network sees at once, versus the proportion of foreground voxels available in each training sample. It is known already that Unets perform worse with low global context, but enlarging the context comes at the cost of heavy class imbalance between background (typically very large) and foreground (much smaller) while training. In this abstract, we analyze the behavior of Transformer-based (UNETR) and attention gated (Attention-Unet) models along with vanilla-Unets across this trade-off. We explore this using a synthetic data set, and a subset of the spleen segmentation data set from the Medical Segmentation Decathlon to demonstrate our results. Beyond showing that all three types of networks prefer more global context rather than bigger foreground-to- background ratios, we find that UNETR and attention-Unet appear to be less robust than vanilla-Unet to drifts between training versus test foreground ratios.
+🔗 [Project Website](https://amithjkamath.github.io/projects/2022-medneurips-contextvsfbr-tradeoff/)
+
+---
+
+## Overview
+
+In 3D medical image segmentation, patch-based processing is a necessity due to GPU memory constraints. However, choosing the patch size introduces a trade-off between:
+
+- **Global context**: Larger patches include more anatomical information.
+- **Foreground-to-Background Ratio (FBR)**: Smaller patches are more balanced but may lack context.
+
+This project evaluates how segmentation architectures behave across this trade-off, comparing:
+
+- **Vanilla-Unet**
+- **Attention-Unet**
+- **UNETR (Transformer-based)**
+
+We evaluate on both synthetic datasets and the spleen segmentation dataset from the [Medical Segmentation Decathlon](http://medicaldecathlon.com/).
+
+---
+
+## Key Findings
+
+- Larger patch sizes (more context) consistently improve performance.
+- UNETR and Attention-Unet are more sensitive to changes in FBR at test time.
+- Vanilla-Unet shows greater robustness across varying FBR distributions.
+- A diverse FBR range during training is crucial for model generalizability.
+
+---
+
+## Setup
+
+### Installation
+
+```bash
+git clone https://github.com/amithjkamath/context_vs_fbr.git
+cd context_vs_fbr
+pip install -r requirements.txt
+```
 
 ## Organization of code
 
