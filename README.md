@@ -1,6 +1,6 @@
 # Context versus Foreground Ratio trade-off for 3D Image Segmentation
 
-![NeurIPSW 2022](https://img.shields.io/badge/Conference-NeurIPSW%202022-blue)
+![NeurIPSW 2022](https://img.shields.io/badge/Conference-NeurIPSW%202022-blue) ![Python](https://img.shields.io/badge/python-3.8%2B-blue) ![License](https://img.shields.io/github/license/amithjkamath/context_vs_fbr)
 
 This repository contains experiments associated with the [Medical Image meets NeurIPS 2022 Workshop abstract](http://www.cse.cuhk.edu.hk/~qdou/public/medneurips2022/72.pdf):
 
@@ -45,8 +45,9 @@ We evaluate on both synthetic datasets and the spleen segmentation dataset from 
 
 ```bash
 git clone https://github.com/amithjkamath/context_vs_fbr.git
-cd context_vs_fbr
-pip install -r requirements.txt
+cd rcontext_vs_fbr
+uv venv .venv
+uv pip install -r pyproject.toml
 ```
 
 ## Organization of code
@@ -61,13 +62,15 @@ and
 
 ### Dependencies
 
-The dependencies for this project are in the [requirements file](./requirements.txt). They are listed below as well:
+The dependencies for this project are in the [project file](./pyproject.toml). They are listed below as well:
 
-    monai==0.9.1
-    nibabel==4.0.2
-    numpy==1.23.2
-    torch==1.12.1
-    wandb==0.13.3
+    monai~=0.9.1
+    nibabel>=4.0.2
+    numpy~=1.23.2
+    pillow>=10.4.0
+    torch~=2.0.1
+    tqdm>=4.67.1
+    wandb>=0.13.3
 
 ### Where to get the clinical data?
 

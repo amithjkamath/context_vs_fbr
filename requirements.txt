@@ -1,5 +1,0 @@
-monai==0.9.1
-nibabel==4.0.2
-numpy==1.23.2
-torch==1.12.1
-wandb==0.13.3
