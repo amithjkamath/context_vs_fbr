@@ -1,6 +1,6 @@
 # Context versus Foreground Ratio trade-off for 3D Image Segmentation
 
-![NeurIPSW 2022](https://img.shields.io/badge/Conference-NeurIPSW%202022-blue) ![Python](https://img.shields.io/badge/python-3.8%2B-blue) ![License](https://img.shields.io/github/license/amithjkamath/context_vs_fbr)
+![NeurIPSW 2022](https://img.shields.io/badge/Conference-NeurIPSW%202022-blue) ![Python](https://img.shields.io/badge/python-3.8%2B-blue) ![Testing](https://github.com/amithjkamath/context_vs_fbr/actions/workflows/test.yaml/badge.svg) ![License](https://img.shields.io/github/license/amithjkamath/context_vs_fbr)
 
 This repository contains experiments associated with the [Medical Image meets NeurIPS 2022 Workshop abstract](http://www.cse.cuhk.edu.hk/~qdou/public/medneurips2022/72.pdf):
 
