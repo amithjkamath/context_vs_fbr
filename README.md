@@ -54,23 +54,15 @@ uv pip install -r pyproject.toml
 
 To reproduce these results, run the following:
 
->> run_synthetic_experiments.sh
+    run_synthetic_experiments.sh
 
 and 
 
->> run_clinical_experiments.sh
+    run_clinical_experiments.sh
 
 ### Dependencies
 
-The dependencies for this project are in the [project file](./pyproject.toml). They are listed below as well:
-
-    monai~=0.9.1
-    nibabel>=4.0.2
-    numpy~=1.23.2
-    pillow>=10.4.0
-    torch~=2.0.1
-    tqdm>=4.67.1
-    wandb>=0.13.3
+The dependencies for this project are in the [project file](./pyproject.toml).
 
 ### Where to get the clinical data?
 
@@ -102,11 +94,11 @@ Run the shell scripts as indicated earlier, and then to analyze the results, you
 
 Then run the notebooks to generate the graphs, for synthetic experiments:
 
->> synthetic-analysis.ipynb
+    synthetic_analysis.py
 
 and for clinical (spleen) experiments:
 
->> spleen-analysis.ipynb
+    spleen_analysis.py
 
 ## Weights and Biases runs
 
