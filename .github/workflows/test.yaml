@@ -23,7 +23,7 @@ jobs:
         run: pip install uv
 
       - name: Install dependencies with uv
-        run: uv pip install -r pyproject.toml
+        run: uv pip install --system --group default
 
       - name: Run tests
         run: python -m unittest discover -s .
