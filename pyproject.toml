@@ -1,7 +1,7 @@
 [project]
 name = "context-vs-fbr"
 version = "0.1.0"
-description = "Add your description here"
+description = "This repository supports our recent MedNeurIPS 2022 abstract on the importance of context versus foreground-to-background ratio in segmentation tasks."
 readme = "README.md"
 requires-python = "~=3.8"
 dependencies = [
